@@ -1,3 +1,82 @@
+body {
+    background: #FFF;
+    color: #000;
+}
+// _______________ H E A D E R _________________
+header {
+    background: $gradient-color;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 140px 140px;
+}
 h1 {
-    color: red;
+    display: flex;
+    justify-content: center;
+    color:#000;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+// _______________ M A I N _________________
+
+main {
+    margin: 5rem 0;
+    display: grid;
+    justify-content: center;
+}
+
+    // ---------------- Formulaire  ----------------
+
+.form_add-session {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    background: $gradient-grey;
+    padding: 3rem;
+    box-shadow: 0 2px 45px 2px #ccc;
+    border-radius: 1rem;
+    &_metier {
+        &_select {
+            border: none;
+        }
+    }
+}
+.field {
+    display: grid;
+}
+
+.label {
+    padding-bottom: .5rem;
+}
+
+.input, .select{
+    border: $border-light;
+    border-radius: $border-rad;
+    padding: .5rem;
+}
+.btn {
+    justify-self: center;
+    padding: 1rem;
+    border: none;
+    border-radius: $border-rad;
+    background: black;
+    color: $color-secondary-light;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 15px 2px #ccc;
+    &:hover {
+        background: $color-primary;
+        color: #000;
+    }
+}
+
+// _______________ F O O T E R _________________
+
+footer {
+    background: $color-secondary-light;
+    color: #ccc;
+    padding: 3rem;
+    display: grid;
+    justify-content: center;
 }

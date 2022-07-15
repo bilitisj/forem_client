@@ -1,0 +1,14 @@
+// _______________ C O L O R S _________________
+
+$color-primary:#75FD92;
+$color-secondary:#e8bc22;
+$color-primary-dark: darken($color-primary, 35%);
+$color-secondary-light: lighten($color-secondary, 35%);
+
+$gradient-color: linear-gradient(160deg, $color-primary 15%, $color-secondary-light 85%);
+$gradient-grey:linear-gradient(-10deg, #f5f5f5 0%, #FFF 45%);
+
+// _______________ B O R D E R _________________
+
+$border-light: 1px solid #ccc;
+$border-rad: .5rem;
