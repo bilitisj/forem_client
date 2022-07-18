@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="../../dist/style/style.min.css">
+        <title>Inscrire des stagiaires à la session</title>
+    </head>
+    <body>
+        <header>
+            <h1>Forem</h1>
+            <nav class="nav">
+                <ul class="nav_liste">
+                    <li class="nav_liste_item"><a href="">Connexion</a></li>
+                    <li class="nav_liste_item"><a href="">Admin</a></li>
+                    <li class="nav_liste_item"><a href="">User</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="section_inscription section">
+                <h2>Inscrire des participants à une session</h2>
+                <!----------------------- F O R M U L A I R E ----------------------->
+                <form class="form_inscription form" action="">
+                    <!-- - - - - - - - - - - Choix de Session - - - - - - - - - -->
+                    <div class="form_inscription_session field">
+                        <label class="form_inscription_session_label label"for="">Session</label>
+                        <select class="form_inscription_session_select select">
+                            <option value="">Choisissez une session</option>
+                            <!--injecter via session.js -->
+                        </select>
+                    </div>
+                    <!-- - - - - - - - - - - Nom des participants - - - - - - - - - -->
+                    <div class="form_inscription_student field">
+                        <label class="form_inscription_student_label label"for="">Rechercher des participants</label>
+                        <input type="text" class="form_inscription_student_input input">
+                    </div>
+                    <div>
+                        <p>Liste des participants</p>
+                        <ul class="section_inscription_liste">
+                            <li class="section_inscription_liste-item"></li>
+                        </ul>
+                    </div>
+
+                    <button class="btn">Valider</button>
+                </form>
+
+            </section>
+        </main>
+        <footer>&copyBili - 2022</footer>
+        <script src="../../src/Js/inscription.js"></script>
+    <body>
+</html>
