@@ -1,0 +1,63 @@
+
+.savoir {
+    margin: 2rem 5rem;
+    padding: 2rem;
+    border: $border-light;
+    background: $gradient-grey;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:auto ;
+    grid-template-areas:    " titre choix"
+                            "def choix"
+                            "def choix"
+                            "def choix"
+                            "def choix";
+    &_titre {
+        grid-area: titre;
+        padding: 1rem 2rem;
+        margin: 0;
+        font-size: 1.8rem;
+        color: $color-primary-dark;
+    }
+    &_sous-titre {
+        grid-area: def;
+        padding: .5rem 3rem;
+        margin: 0;
+        font-weight: bold;
+        font-size: 1.2rem;
+
+    }
+    &_definition {
+        grid-area: def;
+        padding: .5rem 3rem;
+        margin: 0;
+        font-weight: 100;
+        font-size: 1.1rem;
+    }
+    &_radio {
+        grid-area: choix;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 2rem;
+        background: white;
+        box-shadow: 0 1px 25px 1px #ccc;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #999;
+    transition: 0.1s all linear;
+    &:checked {
+        border: 6px solid $color-primary-dark;
+    }
+}
