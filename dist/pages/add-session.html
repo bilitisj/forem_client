@@ -8,9 +8,11 @@
     <body>
         <header>
             <h1>Ajouter une  nouvelle session</h1>
-            <nav>
-                <ul>
-                    <li></li>
+            <nav class="nav">
+                <ul class="nav_liste">
+                    <li class="nav_liste_item"><a href="">Connexion</a></li>
+                    <li class="nav_liste_item"><a href="">Admin</a></li>
+                    <li class="nav_liste_item"><a href="">User</a></li>
                 </ul>
             </nav>
         </header>
@@ -22,9 +24,7 @@
                     <label class="form_add-session_metier_label label"for="">Métier</label>
                     <select class="form_add-session_metier_select select">
                         <option value="">Choisissez un métier</option>
-                        <option value="">Web Designer – Développeur Front-End</option>
-                        <option value="">Infographiste</option>
-                        <option value="">Web Designer Ux/Ui</option>
+                        <!--injecter via session.js -->
                     </select>
                 </div>
                 <!-- - - - - - - - - - - Nom - - - - - - - - - -->
@@ -37,11 +37,18 @@
                     <label class="form_add-session_centre_label label"for="">Centre</label>
                     <select class="form_add-session_centre_select select">
                         <option value="">Choisissez un centre</option>
-                        <option value="">Cepegra</option>
-                        <option value="">Corail</option>
+                        <!--injecter via session.js -->
                     </select>
                 </div>
-                                <!-- - - - - - - - - - - Date - - - - - - - - - -->
+                <!-- - - - - - - - - - - Formateur - - - - - - - - - -->
+                <div class="form_add-session_former field">
+                    <label class="form_add-session_former_label label"for="">Formateur</label>
+                    <select class="form_add-session_former_select select">
+                        <option value="">Choisissez un formateur</option>
+                        <!--injecter via session.js -->
+                    </select>
+                </div>
+                <!-- - - - - - - - - - - Date - - - - - - - - - -->
                 <div class="form_add-session_date field">
                     <label class="form_add-session_date_label label"for="">Date de début de formation</label>
                     <input type="date" class="form_add-session_date_input input">
@@ -50,6 +57,6 @@
             </form>
         </main>
         <footer>&copyBili - 2022</footer>
-        <sript src="main.js"></script>
+        <script src="../../src/Js/session.js"></script>
     <body>
 </html>

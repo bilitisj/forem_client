@@ -5,7 +5,7 @@ body {
 // _______________ H E A D E R _________________
 header {
     background: $gradient-color;
-    padding: 4rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     border-radius: 0px 0px 140px 140px;
@@ -17,6 +17,30 @@ h1 {
     text-transform: uppercase;
     font-weight: 400;
 }
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0 0 ;
+    &_liste {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        &_item, a, a:visited { 
+            text-decoration:none;
+            color: black;
+            margin:0 1rem;
+            padding: 1rem;
+            & a:hover {
+                background: $color-secondary-transp;
+                padding: 1rem;
+                border-radius: $border-rad;
+            }
+        }
+    }
+}
+
+
 
 // _______________ M A I N _________________
 
@@ -32,6 +56,7 @@ main {
     display: grid;
     justify-content: center;
     gap: 2rem;
+    width: 20rem;
     background: $gradient-grey;
     padding: 3rem;
     box-shadow: 0 2px 45px 2px #ccc;
@@ -61,10 +86,11 @@ main {
     border: none;
     border-radius: $border-rad;
     background: black;
-    color: $color-secondary-light;
-    font-weight: 800;
-    letter-spacing: 1px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
     box-shadow: 0 2px 15px 2px #ccc;
+    cursor: pointer;
     &:hover {
         background: $color-primary;
         color: #000;
