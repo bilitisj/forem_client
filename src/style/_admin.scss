@@ -1,0 +1,23 @@
+.title_admin {
+
+    margin: 0;
+}
+
+.section_grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    &_box {
+        cursor: pointer;
+        transition: 0.3s all linear;
+        &:hover {
+            background: $gradient-primary;
+            & h3 {
+                color: black;
+            }
+        }
+    }
+}
+

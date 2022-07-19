@@ -28,8 +28,9 @@ if (inputParticipants) {
             .then(response => {
                 let template = ''
                 response.data.forEach(user => {
-                    template += `<li>${user.firstname} ${user.lastname} - ${user.email} <button class="btnCible" data-id="${user.id_users}">+</button></li>`
+                    template += `<li class="myListe_item hover">${user.firstname} ${user.lastname} - ${user.email}</li>`
                 })
+                myListe.classList.remove('hidden')
                 myListe.innerHTML = template
             })
     })
@@ -41,19 +42,22 @@ myListe.addEventListener('click', (e) => {
     let cible = e.target
     if (cible.classList.contains('btnCible')) {
         let id = cible.dataset.id
-        let payload = {
+/*         let payload = {
             id_users : id,
             id_session : id_session,
             token: localStorage.token
-        }
-        fetch(urlApi = 'inscriptions', {
-            method: 'POST',
-            body: JSON.stringify(payload)
-        })
+        } */
+        fetch(urlApi = 'inscriptions')
+/*             method: 'POST',
+            body: JSON.stringify(payload) */
             .then(response => response.json())
             .then(response => {
-            afficheListe.innerHTML =  inputParticipants.value
+                let template = ''
+                response.data.forEach(user => {
+                    template += `<li>${user.firstname} ${user.lastname} - ${user.email}</li>`
+                })
+                afficheListe.innerHTML = template
             })
-    }
-})
+        }
+    })
 

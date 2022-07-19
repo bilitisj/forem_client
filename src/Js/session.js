@@ -31,7 +31,7 @@ fetch(urlApi + 'centres')
     .catch(error => console.error(error));
 
 // --------------- F O R M A T E U R S ---------------
-fetch(`${urlApi}users?type=formateur`)
+fetch(`${urlApi}users?search=&type=formateur`)
 .then(response => response.json())
 .then(response => {
     let template = ''

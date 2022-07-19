@@ -1,0 +1,44 @@
+
+/*_________________________ STYLE Connexion _________________________*/
+.connexion {
+    margin:  6rem 0;
+}
+
+.form_connexion {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: $gradient-color-light;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: $box-shadow-light;
+    &_titre {
+        padding: 0;
+    }
+    &_btn {
+        margin: 2rem 0 1rem;
+    }
+}
+
+.champs {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+.label {
+    padding-bottom: .5rem;
+}
+
+.input {
+    appearance: none;
+    border: none;
+    height: 2rem;
+    border-radius: .3rem;
+}
+
+.form_connection_password {
+    margin-top: 2rem;
+}
+

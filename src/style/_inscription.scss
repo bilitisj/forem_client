@@ -1,0 +1,38 @@
+.btnCible {
+    cursor: pointer;
+    margin-inline-start: 1rem;
+    background: $color-primary;
+    border-radius: .2rem;
+    border: 1px solid transparent;
+    transition: 0.1s all linear;
+    &:hover {
+        border: 1px solid black;
+    }
+}
+
+.myListe {
+    display: grid;
+    padding: 0;
+    border: $border-light;
+    border-radius: $border-rad;
+    &_item {
+        display: flex;
+        padding: 1rem;
+        line-height: 2rem;
+        justify-content:space-between;
+        transition: 0.1s all linear;
+        border-bottom: 1px solid $color-grey-light;
+        cursor: pointer;
+        &:hover {
+            background: $color-grey-light;
+            &::after {
+                content: "+";
+                display: block;
+                font-weight: bold;
+                font-size: 2rem;
+                color: $color-primary-dark;
+
+            }
+        }
+    }
+}
