@@ -1,19 +1,27 @@
+// _______________ A D M I N _________________
 .title_admin {
-
-    margin: 0;
+    margin:4rem 0 0;
 }
 
 .section_grid {
-    margin-top: 2rem;
+    margin: 2rem 2rem 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     &_box {
+        display: grid;
+        justify-content: center;
+        background: $gradient-grey;
+        padding: 3rem;
+        box-shadow: $box-shadow-light;
+        border: 1px solid transparent;
+        border-radius: 1rem;
         cursor: pointer;
         transition: 0.3s all linear;
         &:hover {
-            background: $gradient-primary;
+            background: #e7e7e7;
+            border: $border-light;
             & h3 {
                 color: black;
             }
@@ -21,3 +29,25 @@
     }
 }
 
+
+// - - - - - - liste session - - - - - - 
+.session_list {
+    display: grid;
+    gap: 2rem;
+    &-item {
+        display: grid;
+        justify-content: center;
+        width: 30rem;
+        background: $gradient-grey;
+        padding: 3rem;
+        box-shadow: $box-shadow-light;
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: 0.3s all linear;
+        &:hover {
+            background: #e7e7e7;
+            border: $border-light;
+        }
+    }
+}

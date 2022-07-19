@@ -70,7 +70,7 @@ h1 {
 // _______________ M A I N _________________
 
 main {
-    margin: 5rem 0;
+
     display: grid;
     justify-content: center;
 }
@@ -91,7 +91,10 @@ h3 {
     color: $color-primary-dark;
 }
 
-.section {
+// - - - - - - - -  - Formulaire - - - - - - - -  -
+
+.section_formulaire {
+    margin: 2rem;
     width: 30rem;
     display: grid;
     justify-content: center;
@@ -100,7 +103,6 @@ h3 {
     box-shadow: $box-shadow-light;
     border-radius: 1rem;
 }
-// - - - - - - - -  - Formulaire - - - - - - - -  -
 .form {
     display: grid;
     gap: 2rem;

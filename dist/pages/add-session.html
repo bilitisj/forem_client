@@ -20,7 +20,7 @@
             <section class="section_formulaire section">
                 <h3>Ajouter une session</h3>
                 <!----------------------- F O R M U L A I R E ----------------------->
-                <form class="form_add-session form" action="">
+                <form class="form_add-session form" action="" method="post">
                     <!-- - - - - - - - - - - Metier - - - - - - - - - -->
                     <div class="form_add-session_metier field">
                         <label class="form_add-session_metier_label label"for="">Métier</label>
@@ -46,6 +46,7 @@
                     <div class="form_add-session_former field">
                         <label class="form_add-session_former_label label"for="">Formateur</label>
                         <select class="form_add-session_former_select select">
+                            <option value="">Choisissez un formateur</option>
                             <!--injecter via session.js -->
                         </select>
                     </div>
@@ -54,7 +55,7 @@
                         <label class="form_add-session_date_label label"for="">Date de début de formation</label>
                         <input type="date" class="form_add-session_date_input input">
                     </div>
-                    <button class="form_add-session_btn btn"> <a href="inscription.html"> Ajouter une session</a></button>
+                    <button type="submit" class="form_add-session_btn btn">Ajouter une session</button>
                 </form>
             </section>
         </main>

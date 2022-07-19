@@ -23,7 +23,7 @@ fetch(urlApi + 'session')
     // --------------- R E C H E R C H E R   P A R T I C I P A N T S ---------------
 if (inputParticipants) {
     inputParticipants.addEventListener('keyup', function(e) {
-        fetch(`${urlApi}users?search=${e.target.value}&type=stagiaire`)
+        fetch(`${urlApi}user?search=${e.target.value}&type=stagiaire`)
             .then(response => response.json())
             .then(response => {
                 let template = ''
@@ -43,11 +43,11 @@ myListe.addEventListener('click', (e) => {
     if (cible.classList.contains('btnCible')) {
         let id = cible.dataset.id
 /*         let payload = {
-            id_users : id,
+            id_user : id,
             id_session : id_session,
             token: localStorage.token
         } */
-        fetch(urlApi = 'inscriptions')
+        fetch(urlApi = 'inscription')
 /*             method: 'POST',
             body: JSON.stringify(payload) */
             .then(response => response.json())

@@ -6,6 +6,7 @@
 
 .form_connexion {
     display: grid;
+    width: 25rem;
     justify-items: center;
     align-items: center;
     background: $gradient-color-light;
@@ -31,7 +32,7 @@
     padding-bottom: .5rem;
 }
 
-.input {
+.input-connexion {
     appearance: none;
     border: none;
     height: 2rem;
