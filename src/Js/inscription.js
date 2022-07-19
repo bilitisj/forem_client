@@ -2,6 +2,10 @@ const urlApi = 'http://localhost:8888/forem-api/';
 
 const sessionChoice = document.querySelector('.form_inscription_session_select');
 const inputParticipants = document.querySelector('.form_inscription_student_input');
+const myListe = document.querySelector('.myListe');
+const afficheListe = document.querySelector('.section_inscription_liste');
+const btnCible = document.querySelector('.btnCible')
+
 
 // --------------- C H O I X   D E   S E S S I O N ---------------
 fetch(urlApi + 'session')
@@ -17,6 +21,39 @@ fetch(urlApi + 'session')
     .catch(error => console.error(error));
 
     // --------------- R E C H E R C H E R   P A R T I C I P A N T S ---------------
-inputParticipants.addEventListener("click", (e) => {
-    
+if (inputParticipants) {
+    inputParticipants.addEventListener('keyup', function(e) {
+        fetch(`${urlApi}users?search=${e.target.value}&type=stagiaire`)
+            .then(response => response.json())
+            .then(response => {
+                let template = ''
+                response.data.forEach(user => {
+                    template += `<li>${user.firstname} ${user.lastname} - ${user.email} <button class="btnCible" data-id="${user.id_users}">+</button></li>`
+                })
+                myListe.innerHTML = template
+            })
+    })
+}
+
+    // --------------- Click sur le bouton + ---------------
+myListe.addEventListener('click', (e) => {
+    e.preventDefault();
+    let cible = e.target
+    if (cible.classList.contains('btnCible')) {
+        let id = cible.dataset.id
+        let payload = {
+            id_users : id,
+            id_session : id_session,
+            token: localStorage.token
+        }
+        fetch(urlApi = 'inscriptions', {
+            method: 'POST',
+            body: JSON.stringify(payload)
+        })
+            .then(response => response.json())
+            .then(response => {
+            afficheListe.innerHTML =  inputParticipants.value
+            })
+    }
 })
+

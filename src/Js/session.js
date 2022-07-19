@@ -31,16 +31,14 @@ fetch(urlApi + 'centres')
     .catch(error => console.error(error));
 
 // --------------- F O R M A T E U R S ---------------
-fetch(urlApi + 'users')
-    .then(response => response.json())
-    .then(response => {
-        if(users.getAttribute("level") === "formateur") {
-            console.log(response)
-            let template = ''
-            response.data.forEach(el => {
-                template += `<option data-id="${el.id_users}">${el.firstname} ${el.lastname}</option>`
-            });
-            addFormer.innerHTML += template
-        } 
+fetch(`${urlApi}users?type=formateur`)
+.then(response => response.json())
+.then(response => {
+    let template = ''
+    response.data.forEach(user => {
+        template += `<option>${user.firstname} ${user.lastname}</option>`
     })
+    addFormer.innerHTML = template
+})
     .catch(error => console.error(error));
+
