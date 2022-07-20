@@ -80,10 +80,10 @@ formInscription.addEventListener('submit', e => {
         console.log(response)
         if(response.code === 200){
             //alert('session added');
-            //window.location.href = 'admin.html';
+            window.location.href = 'admin.html';
         } else {
             // alert('token error');
-            //window.location.href = 'admin.html';
+            window.location.href = 'admin.html';
         }
     })
     .catch(error => console.log(error))

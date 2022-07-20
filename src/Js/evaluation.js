@@ -3,7 +3,7 @@ const urlApi = 'http://localhost:8888/forem-api/';
 const addRadio = document.querySelector('.savoir_radio');
 
 // --------------- C O M P O R T E M E N T S ---------------
-fetch(urlApi + 'comportement/1')
+fetch(urlApi + 'comportement')
     .then(response => response.json())
     .then(response => {
         console.log(response)

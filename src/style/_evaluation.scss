@@ -1,4 +1,9 @@
-
+.session_choice-select {
+    margin: 5rem 5rem 0;
+    border: $border-light;
+    border-radius: $border-rad;
+    padding: .5rem;
+}
 .savoir {
     margin: 2rem 5rem;
     padding: 2rem;
@@ -59,5 +64,25 @@
     transition: 0.1s all linear;
     &:checked {
         border: 6px solid $color-primary-dark;
+    }
+}
+
+.btn_form-eval {
+    margin: 3rem 50rem;
+    justify-self: center;
+    padding: 1rem;
+    border: none;
+    border-radius: $border-rad;
+    background: black;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    box-shadow: $box-shadow-light;
+    transition: 0.3s all linear;
+    cursor: pointer;
+    &:hover {
+        background: $color-primary;
+        color: #000;
     }
 }
