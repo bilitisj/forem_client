@@ -12,8 +12,8 @@
             <nav class="nav">
                 <ul class="nav_liste">
                     <li class="nav_liste_item"><a href="../../index.html">Connexion</a></li>
-                    <li class="nav_liste_item"><a href="../pages/admin.html">Admin</a></li>
-                    <li class="nav_liste_item"><a href="">User</a></li>
+                    <li class="nav_liste_item"><a href="./admin.html">Admin</a></li>
+                    <li class="nav_liste_item"><a href="./evaluation.html">User</a></li>
                 </ul>
             </nav>
         </header>
@@ -22,27 +22,30 @@
             <section class="section_inscription section">
                 <h3>Inscrire des participants à une session</h3>
                 <!----------------------- F O R M U L A I R E ----------------------->
-                <form class="form_inscription form" action="">
+                <form class="form_inscription form" action="" method="post">
                     <!-- - - - - - - - - - - Choix de Session - - - - - - - - - -->
                     <div class="form_inscription_session field">
                         <label class="form_inscription_session_label label"for="">Session</label>
                         <select class="form_inscription_session_select select">
                             <option value="">Choisissez une session</option>
-                            <!--injecter via session.js -->
+                            <!-- nom de la session injecté via session.js -->
                         </select>
                     </div>
-                    <!-- - - - - - - - - - - Nom des participants - - - - - - - - - -->
+                    <!-- - - - - - - - - - -CHOIX - Nom des participants - - - - - - - - - -->
                     <div class="form_inscription_student field">
                         <label class="form_inscription_student_label label"for="">Rechercher des participants</label>
                         <input type="text" class="form_inscription_student_input input">
-                        <ul class="myListe hidden">
-
+                        <ul class="choix_liste_participants hidden">
+                            <li class="choix_liste_participants_item hidden">
+                                <!-- stagiaires injectés via inscription.js -->
+                            </li>
                         </ul>
                     </div>
+                    <!-- - - - - - - - - - - LISTE - Nom des participants - - - - - - - - - -->
                     <div>
                         <p>Liste des participants</p>
-                        <ul class="section_inscription_liste">
-                            <li class="section_inscription_liste-item"></li>
+                        <ul class="liste_participants">
+                            <!-- stagiaires injectés via inscription.js -->
                         </ul>
                     </div>
 

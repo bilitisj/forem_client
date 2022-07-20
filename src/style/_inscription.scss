@@ -1,22 +1,14 @@
-.btnCible {
-    cursor: pointer;
-    margin-inline-start: 1rem;
-    background: $color-primary;
-    border-radius: .2rem;
-    border: 1px solid transparent;
-    transition: 0.1s all linear;
-    &:hover {
-        border: 1px solid black;
-    }
-}
 
-.myListe {
+
+.choix_liste_participants_item {
     display: grid;
+    margin: 0;
     padding: 0;
     border: $border-light;
     border-radius: $border-rad;
-    &_item {
+    &-un {
         display: flex;
+        margin: 0;
         padding: 1rem;
         line-height: 2rem;
         justify-content:space-between;

@@ -45,7 +45,7 @@ fetch(`${urlApi}user?search=&type=formateur`)
 })
     .catch(error => console.error(error));
 
-// --------------- A J O U T E R   U N E   S E S S I O N ---------------
+// --------------- A J O U T E R (DB)   U N E   S E S S I O N ---------------
 
 formAddSession.addEventListener('submit', e => {
     e.preventDefault();
