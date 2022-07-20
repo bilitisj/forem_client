@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../../dist/style/style.min.css">
         <title>Inscrire des stagiaires à la session</title>
@@ -19,75 +20,83 @@
         <main>
             <h2>Métier: Web Designer Front End</h2>
             <!------------------------ LES SAVOIRS ------------------------>
-            <!-- - - - - - - - - - - Analyse  - - - - - - - - - --->
-            <section class="savoir">
-                <h3 class="savoir_titre ">Esprit d'analyse</h3>
-                <div>
-                    <p class="savoir_sous-titre">J'analyse les problèmes pour y trouver des solutions</p>
-                    <p class="savoir_definition">Capacité de réfléchir et de faire montre de logique et de jugement face à des décisions, d'évaluer des problèmes ou des situations en faisant les recherches nécessaires et en analysant les différentes composantes</p>
-                </div>
-                <div class="savoir_radio">
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 1. Je me fie à mon instinct et je commence à travailler sans réflexion.
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 2. Je consulte le web à la recherche d'une solution toute faite. Je fais appel à quelqu'un pour m'aider.
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 3. Je décompose un problème en sous-éléments en utilisant un schéma. Je consulte différentes ressources & documentations pour parvenir à une solution.
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 4. J'anticipe les évolutions futures et organise les problèmes. J'évalue de manière réaliste mes limites et le temps nécessaire.
-                    </label>
-                </div>
-            </section>
+            <form action="" method="post">
+                <!-- - - - - - - - - - - Analyse  - - - - - - - - - --->
+                <section class="savoir">
+                    <h3 class="savoir_titre ">Esprit d'analyse</h3>
+                    <div>
+                        <p class="savoir_sous-titre">J'analyse les problèmes pour y trouver des solutions</p>
+                        <p class="savoir_definition">Capacité de réfléchir et de faire montre de logique et de jugement face à des décisions, d'évaluer des problèmes ou des situations en faisant les recherches nécessaires et en analysant les différentes composantes</p>
+                    </div>
+                    <div class="savoir_radio">
+                            <!-- 4 radios injectés via session.js -->
+                    </div>
+                </section>
 
-            <!-- - - - - - - - - - - Curiosité  - - - - - - - - - --->
-            <section class="savoir">
-                <h3 class="savoir_titre ">Curiosité intellectuelle</h3>
-                <div>
-                    <p class="savoir_sous-titre">Je suis curieux intellectuellement pour ce qui touche à mon métier</p>
-                    <p class="savoir_definition">Capacité d'ouvrir son champ de connaissance, d'avoir l'esprit ouvert, d'acquérir continuellement de nouvelles connaissances et d'apprendre de ses expériences antérieures</p>
-                </div>
-                <div class="savoir_radio">
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 1. J'évite d'utiliser des choses inconnues et je reste sur mes acquis.
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 2. Je découvre des nouveautés lorsqu'elles se présentent à moi. Je pose des questions à mes pairs en fonction des besoins.
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 3. Je me tiens au courant des dernières nouveautés dans mon domaine. Je fais preuve de sens critique, j'établis des liens.
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau"> 4. Je fais des recherches et me lance des défis en dehors de mon temps de travail "officiel" (hackathons, challenges…)
-                    </label>
-                </div>
-            </section>
+                <!-- - - - - - - - - - - Curiosité  - - - - - - - - - --->
+                <section class="savoir">
+                    <h3 class="savoir_titre ">Curiosité intellectuelle</h3>
+                    <div>
+                        <p class="savoir_sous-titre">Je suis curieux intellectuellement pour ce qui touche à mon métier</p>
+                        <p class="savoir_definition">Capacité d'ouvrir son champ de connaissance, d'avoir l'esprit ouvert, d'acquérir continuellement de nouvelles connaissances et d'apprendre de ses expériences antérieures</p>
+                    </div>
+                    <div class="savoir_radio">
+                            <!-- 4 radios injectés via session.js -->
+                    </div>
+                </section>
 
-            <!-- - - - - - - - - - - Autonomie  - - - - - - - - - --->
-            <section class="savoir">
-                <h3 class="savoir_titre ">Autonomie</h3>
-                <div>
-                    <p class="savoir_sous-titre"></p>
-                    <p class="savoir_definition"></p>
-                </div>
-                <div class="savoir_radio">
-                    <label class="radio">
-                        <input type="radio" name="niveau">
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau">
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau">
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="niveau">
-                    </label>
-                </div>
-            </section>
-            <a href="" class="btn">Valider</a>
+                <!-- - - - - - - - - - - Autonomie  - - - - - - - - - --->
+                <section class="savoir">
+                    <h3 class="savoir_titre ">Autonomie</h3>
+                    <div>
+                        <p class="savoir_sous-titre">Je mène ma barque</p>
+                        <p class="savoir_definition">Capacité de se prendre en charge, selon ses responsabilités, de façon à poser des actions au moment opportun dans un contexte déterminé</p>
+                    </div>
+                    <div class="savoir_radio">
+                            <!-- 4 radios injectés via session.js -->
+                    </div>
+                </section>
+
+                <!-- - - - - - - - - - - Critique  - - - - - - - - - --->
+                <section class="savoir">
+                    <h3 class="savoir_titre ">Acceptation de la critique</h3>
+                    <div>
+                        <p class="savoir_sous-titre">J'accepte les commentaires dans le but d'améliorer mon travail</p>
+                        <p class="savoir_definition">Capacité de recevoir des commentaires et des remarques dans le but d'améliorer son travail</p>
+                    </div>
+                    <div class="savoir_radio">
+                            <!-- 4 radios injectés via session.js -->
+                    </div>
+                </section>
+
+                <!-- - - - - - - - - - - Organisation  - - - - - - - - - --->
+                <section class="savoir">
+                    <h3 class="savoir_titre ">Acceptation de la critique</h3>
+                    <div>
+                        <p class="savoir_sous-titre">Je planifie, prépare et organise mon travail pour respecter les échéances</p>
+                        <p class="savoir_definition">Capacité de gérer efficacement et rationnellement son travail et de planifier les tâches à effectuer dans un délai prescrit</p>
+                    </div>
+                    <div class="savoir_radio">
+                            <!-- 4 radios injectés via session.js -->
+                    </div>
+                </section>
+
+                <!-- - - - - - - - - - - Motivation  - - - - - - - - - --->
+                <section class="savoir">
+                    <h3 class="savoir_titre ">Acceptation de la critique</h3>
+                    <div>
+                        <p class="savoir_sous-titre">Je suis enthousiaste dans la réalisation de mes tâches</p>
+                        <p class="savoir_definition">Capacité d'avoir de l'énergie et de la vitalité et à afficher intérêt et enthousiasme face à une tâche professionnelle</p>
+                    </div>
+                    <div class="savoir_radio">
+                            <!-- 4 radios injectés via session.js -->
+                    </div>
+                </section>
+
+                <!-- - - - - - - - - - - Button  - - - - - - - - - --->
+                <button class="btn">Valider</button>
+
+            </form>
 
         </main>
         <footer>&copyBili - 2022</footer>

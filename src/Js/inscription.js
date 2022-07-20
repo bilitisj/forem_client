@@ -14,7 +14,7 @@ fetch(urlApi + 'session')
         console.log(response)
         let template = ''
         response.data.forEach(el => {
-            template += `<option data-id="${el.id_session}">${el.label}</option>`
+            template += `<option data-id="${el.id_session}">${el.label_session}</option>`
         });
         sessionChoice.innerHTML += template
     })

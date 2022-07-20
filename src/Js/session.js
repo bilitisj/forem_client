@@ -14,7 +14,7 @@ fetch(urlApi + 'metier')
         console.log(response)
         let template = ''
         response.data.forEach(el => {
-            template += `<option data-id="${el.id_metiers}">${el.label}</option>`
+            template += `<option value="${el.id_metier}">${el.label}</option>`
         });
         addMetier.innerHTML += template
     })
@@ -27,7 +27,7 @@ fetch(urlApi + 'centre')
         console.log(response)
         let template = ''
         response.data.forEach(el => {
-            template += `<option data-id="${el.id_centres}">${el.name}</option>`
+            template += `<option value="${el.id_centre}">${el.name}</option>`
         });
         addCentre.innerHTML += template
     })
@@ -39,7 +39,7 @@ fetch(`${urlApi}user?search=&type=formateur`)
 .then(response => {
     let template = ''
     response.data.forEach(user => {
-        template += `<option>${user.firstname} ${user.lastname}</option>`
+        template += `<option value="${user.id_user}">${user.firstname} ${user.lastname}</option>`
     })
     addFormer.innerHTML = template
 })
@@ -56,7 +56,7 @@ formAddSession.addEventListener('submit', e => {
             },
         body: JSON.stringify({
             id_metier: addMetier.value,
-            label: formAddSession.querySelector('.form_add-session_nom_input').value,
+            label_session: formAddSession.querySelector('.form_add-session_nom_input').value,
             id_centre: formAddSession.querySelector('.form_add-session_centre_select').value,
             id_user: formAddSession.querySelector('.form_add-session_former_select').value,
             date_start: formAddSession.querySelector('.form_add-session_date_input').value,
@@ -67,11 +67,11 @@ formAddSession.addEventListener('submit', e => {
     .then(response => {
         console.log(response)
         if(response.code === 200){
-            alert('session added');
-            window.location.href = 'inscription.html';
+            //alert('session added');
+            window.location.href = 'admin.html';
         } else {
-            alert('token error');
-            window.location.href = '../../index.html';
+            // alert('token error');
+            window.location.href = 'admin.html';
         }
     })
     .catch(error => console.log(error))

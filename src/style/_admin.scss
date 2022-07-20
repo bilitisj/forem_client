@@ -34,20 +34,42 @@
 .session_list {
     display: grid;
     gap: 2rem;
-    &-item {
+    width: 30rem;
+    &_label-session {
         display: grid;
         justify-content: center;
-        width: 30rem;
         background: $gradient-grey;
-        padding: 3rem;
+        padding: 2rem;
+        margin-bottom: .5rem;
         box-shadow: $box-shadow-light;
         border: 1px solid transparent;
         border-radius: 1rem;
+        color: $color-primary-dark;
+        font-weight: 800;
+        font-size: 1.3rem;
         cursor: pointer;
         transition: 0.3s all linear;
         &:hover {
             background: #e7e7e7;
             border: $border-light;
         }
+        &_item {
+            &:first-child {
+                margin-top: 1rem;
+            }
+            padding-top: .5rem;
+            color: black;
+            font-weight: 400;
+            font-size: 1rem;
+        }
     }
+}
+
+.section_inscription {
+    margin: 2rem 0 4rem;
+    padding: 3rem;
+    background: $gradient-grey;
+    box-shadow: $box-shadow-light;
+    border: 1px solid transparent;
+    border-radius: 1rem;
 }

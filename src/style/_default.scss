@@ -29,6 +29,7 @@ header {
     display: flex;
     flex-direction: column;
     border-radius: 0px 0px 140px 140px;
+    box-shadow: $box-shadow-light;
 }
 h1 {
     display: flex;
